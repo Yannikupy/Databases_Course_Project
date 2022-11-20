@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Отношение "Научные направления"</title>
+  <style>
+    body {
+      background-color: #2b2b2b;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+<h1>Обновить направление</h1>
+<form action="/scientific_direction/update" method="post">
+  <input type="text" name="Id" placeholder="ID" class="form-control"><br>
+  <select th:name="Column">
+    <option value="section_title">Название направления</option>
+  </select>
+  <input type="text" name="Value" placeholder="Устанавливаемое значение" class="form-control"><br>
+  <button type="submit" class="btn btn-success">Обновить</button>
+</form>
+</body>
+</html>

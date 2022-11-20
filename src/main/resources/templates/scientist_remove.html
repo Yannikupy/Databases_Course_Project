@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Отношение "Ученые"</title>
+    <link rel="stylesheet" th:href="@{/style.css}"/>
+    <style>
+        body {
+            background-color: #2b2b2b;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<h1>Ученый</h1>
+<form action="/scientist/remove" method="post">
+    <input type="text" name="id" placeholder="ID" class="form-control"><br>
+    <button type="submit" class="button-14">Удалить</button>
+</form>
+</body>
+</html>

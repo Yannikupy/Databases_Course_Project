@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" th:href="@{/style.css}"/>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            background-color: #2b2b2b;
+            color: white;
+        }
+    </style>
+    <title>Отношение "Ученые"</title>
+</head>
+<table border="1">
+    <tr>
+        <th>Шифр</th>
+        <th>Научное направление</th>
+    </tr>
+    <tr th:each = "direction: ${directions}">
+        <td th:text="${direction.getCipher()}"></td>
+        <td th:text="${direction.getSectionTitle()}"></td>
+    </tr>
+</table>
+<body>
+<h1>Таблица "Научные направления"</h1>
+<a href="/scientific_direction/add">
+    <button class="button-14">Добавить направление</button>
+</a><br>
+<br>
+<a href="/scientific_direction/remove">
+    <button class="button-14">Удалить направление</button>
+</a><br>
+<br>
+<a href="/scientific_direction/update">
+    <button class="button-14">Обновить направление</button>
+</a><br>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/style.css}"/>
+    <title>Отношение "Научные направления"</title>
+    <style>
+        body {
+            background-color: #2b2b2b;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<h1>Научное направление</h1>
+<form action="/scientific_direction/add" method="post">
+    <input type="text" name="Cipher" placeholder="Код" class="form-control"><br>
+    <input type="text" name="Section_Title" placeholder="Направление" class="form-control"><br>
+    <button type="submit" class="button-14">Сохранить</button>
+</form>
+</body>
+</html>

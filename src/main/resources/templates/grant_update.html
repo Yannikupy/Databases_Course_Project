@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Отношение "Гранты"</title>
+  <link rel="stylesheet" th:href="@{/style.css}"/>
+  <style>
+    body {
+      background-color: #2b2b2b;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+<h1>Обновить грант</h1>
+<form action="/grant/update" method="post">
+  <input type="text" name="Id" placeholder="ID" class="form-control"><br>
+  <select th:name="Column">
+    <option value="name">Наименование</option>
+    <option value="amount">Номинал</option>
+    <option value="section_id">Шифр направления</option>
+    <option value="realisation_year">Год реализации</option>
+  </select>
+  <input type="text" name="Value" placeholder="Устанавливаемое значение" class="form-control"><br>
+  <button type="submit" class="btn btn-success">Обновить</button>
+</form>
+</body>
+</html>

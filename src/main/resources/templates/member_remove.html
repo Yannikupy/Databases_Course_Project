@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Отношение "Участники"</title>
+    <link rel="stylesheet" th:href="@{/style.css}"/>
+    <style>
+        body {
+            background-color: #2b2b2b;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<h1>Участник</h1>
+<form action="/member/remove" method="post">
+    <input type="text" name="Id" placeholder="ID" class="form-control"><br>
+    <button type="submit" class="button-14">Удалить</button>
+</form>
+</body>
+</html>

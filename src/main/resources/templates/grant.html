@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+  <link rel="stylesheet" th:href="@{/style.css}"/>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      background-color: #2b2b2b;
+      color: white;
+    }
+  </style>
+  <title>Отношение "Гранты"</title>
+</head>
+<table border="1">
+  <tr>
+    <th>ID</th>
+    <th>Название</th>
+    <th>Номинал</th>
+    <th>Шифр</th>
+    <th>Год реализации</th>
+  </tr>
+  <tr th:each = "grant: ${grants}">
+    <td th:text="${grant.getId()}"></td>
+    <td th:text="${grant.getName()}"></td>
+    <td th:text="${grant.getAmount()}"></td>
+    <td th:text="${grant.getSectionId()}"></td>
+    <td th:text="${grant.getRealisationYear()}"></td>
+
+  </tr>
+</table>
+<body>
+<h1>Таблица "Гранты"</h1>
+<a href="/grant/add">
+  <button class="button-14">Добавить грант</button>
+</a><br>
+<br>
+<a href="/grant/remove">
+  <button class="button-14">Удалить грант</button>
+</a><br>
+<br>
+<a href="/grant/update">
+  <button class="button-14">Обновить грант</button>
+</a><br>
+</body>
+</html>
